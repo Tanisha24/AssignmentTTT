@@ -1,0 +1,29 @@
+
+
+<input #N class="w3-input w3-border" type="number" placeholder="Enter a number" required >
+
+<button class="w3-button w3-black w3-right w3-section" (click)="submit(N.value); N.value=''">
+<i class="fa fa-paper-plane"></i> SUBMIT
+</button>
+
+
+<table class="words w3-table w3-striped w3-bordered w3-border w3-hoverable ">
+<thead>
+<tr>
+<th>S.No</th>
+<th>Word</th>
+<th>Count</th>
+
+</tr>
+</thead>
+ <tbody>
+   <tr *ngFor="let word of words;let i = index">
+          <td>{{i+1}}</td>
+         <td>{{word.name}}</td>
+         <td>{{word.count}}</td>
+
+
+
+       </tr>
+ </tbody>
+</table>
